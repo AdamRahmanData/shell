@@ -63,7 +63,7 @@ rm ./data/raw/*ipaddr* ./data/processed/user_logs/*ipaddr*
 
 touch inventory.txt
 
-ls processed/*logs* >>inventory.txt
+ls ./data/processed/*logs* >>inventory.txt
 
 
 ###########################################
