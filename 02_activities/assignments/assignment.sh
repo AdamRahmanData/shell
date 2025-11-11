@@ -28,20 +28,60 @@ unzip -q rawdata.zip
 # Complete assignment here
 
 # 1. Create a directory named data
-
+mkdir data
 # 2. Move the ./rawdata directory to ./data/raw
-
+pwd
+ls
+cd data
+mkdir raw
+cd raw
+pwd
+mv C:/Users/AdamRahman/dsi3/shell/02_activities/assignments/newproject/rawdata C:/Users/AdamRahman/dsi3/shell/02_activities/assignments/newproject/data/raw
 # 3. List the contents of the ./data/raw directory
-
+pwd
+ls
 # 4. In ./data/processed, create the following directories: server_logs, user_logs, and event_logs
+cd ../
+pwd
+ls
+mkdir processed
+cd processed
+mkdir server_logs user_logs event_logs
+pwd
+ls
 
 # 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
+cd ../raw/rawdata
+pwd
+ls
+cp server*.log /c/Users/AdamRahman/dsi3/shell/02_activities/assignments/newproject/data/processed/server_logs
+pwd
+cd ../../processed/server_logs
+ls
+pwd
+
 
 # 6. Repeat the above step for user logs and event logs
+cd ../../raw/rawdata
+pwd
+ls
+cp user*.log /c/Users/AdamRahman/dsi3/shell/02_activities/assignments/newproject/data/processed/user_logs
+cp event*.log /c/Users/AdamRahman/dsi3/shell/02_activities/assignments/newproject/data/processed/event_logs
 
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
-
+pwd
+rm *ipaddr*
+ls
+cd ../../processed/user_logs
+pwd
+ls
+rm *ipaddr*
+ls
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
+cd ../../
+touch inventory.txt
+
+ls processed/*logs* >>inventory.txt
 
 
 ###########################################
